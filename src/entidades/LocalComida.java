@@ -1,70 +1,61 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package entidades;
 
-public class LocalComida extends CentroComercial {
-    protected String nombreLocalComida;
-    protected String horario;
-    protected int numTrabajadores;
-    protected int m2;
+/**
+ *
+ * @author bryan
+ */
+public class LocalComida extends LocalBuilder{
 
+    @Override
+    public void buildNombreLocal() {
+        local.setNombreLocal("Local de Comida");}
 
+    @Override
+    public void buildHorario() {
+        local.setHorario("9H00 - 13H00");}
 
-    public LocalComida(String CentroComercial, String nombreLocalComida,String horario, int numTrabajadores, int m2) {
-        super(CentroComercial);
-        this.nombreLocalComida = nombreLocalComida;
-        this.horario = horario;
-        this.numTrabajadores = numTrabajadores;
-        this.m2 = m2;
-    }
+    @Override
+    public void buildNumTrabajadores() {
+        local.setNumTrabajadores(5);}
 
-    public String getNombreLocalComida() {
-        return nombreLocalComida;
-    }
+    @Override
+    public void buildM2() {
+        local.setM2(300);}
 
-    public void setNombreLocalComida(String nombreLocalComida) {
-        this.nombreLocalComida = nombreLocalComida;
-    }
+    @Override
+    public void buildTax() {
+        local.setTax(0);}
 
-    public String getHorario() {
-        return horario;
-    }
-
-    public void setHorario(String horario) {
-        this.horario = horario;
-    }
-
-    public int getNumTrabajadores() {
-        return numTrabajadores;
-    }
-
-    public void setNumTrabajadores(int numTrabajadores) {
-        this.numTrabajadores = numTrabajadores;
-    }
-
-    public int getM2() {
-        return m2;
-    }
-
-    public void setM2(int m2) {
-        this.m2 = m2;
-    }
-
-
-    public double tax(){
-        return 0;
+    //creacion de local de acuerdo al usuario
+    @Override
+    public void buildNombreLocal(String n) {
+        local.setNombreLocal(n);
     }
 
     @Override
-    public double calcularImpuestos(){
-        return calcularImpuestos();
+    public void buildHorario(String h) {
+        local.setHorario(h);
     }
 
     @Override
-    public String toString() {
-        return "LocalComida{" +
-                "nombreLocalComida='" + nombreLocalComida + '\'' +
-                ", horario='" + horario + '\'' +
-                ", numTrabajadores=" + numTrabajadores +
-                ", m2=" + m2 +
-                '}';
+    public void buildNumTrabajadores(int i) {
+        local.setNumTrabajadores(i);
     }
+
+    @Override
+    public void buildM2(double i) {
+        local.setM2(i);
+    }
+
+    @Override
+    public void buildTax(double tax) {
+        local.setTax(tax);
+    }
+
+      
 }
