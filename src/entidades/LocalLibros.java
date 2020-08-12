@@ -9,23 +9,23 @@ package entidades;
  *
  * @author bryan
  */
-public class LocalRopa extends LocalBuilder{
+public class LocalLibros extends LocalBuilder{
 
     @Override
     public void buildNombreLocal() {
-        local.setNombreLocal("Local de Ropa");}
+        local.setNombreLocal("Book World");}
 
     @Override
     public void buildHorario() {
-        local.setHorario("11H00 - 20H00");}
+        local.setHorario("7H00 - 14H00");}
 
     @Override
     public void buildNumTrabajadores() {
-        local.setNumTrabajadores(15);}
+        local.setNumTrabajadores(8);}
 
     @Override
     public void buildM2() {
-        local.setM2(450);}
+        local.setM2(160);}
 
     @Override
     public void buildTax() {
@@ -57,5 +57,5 @@ public class LocalRopa extends LocalBuilder{
     public void buildTax(double tax) {
         local.setTax(tax);
     }
-       
+     
 }

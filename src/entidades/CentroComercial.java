@@ -1,26 +1,40 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package entidades;
 
+/**
+ *
+ * @author bryan
+ */
 public class CentroComercial {
-    protected String nombreCentro;
-
-    public CentroComercial(String nombreCentro) {
-        this.nombreCentro = nombreCentro;
+    private String nombreCentroComercial;
+    private LocalBuilder builder;
+    
+    public void setLocalBuilder(LocalBuilder localBuilder){
+        builder = localBuilder;
     }
 
-    public String getNombreCentro() {
-        return nombreCentro;
+    public void setNombreCentroComercial(String nombreCentroComercial) {
+        this.nombreCentroComercial = nombreCentroComercial;
     }
 
-    public void setNombreCentro(String nombreCentro) {
-        this.nombreCentro = nombreCentro;
+    public String getNombreCentroComercial() {
+        return nombreCentroComercial;
     }
-
-    public double calcularImpuestos(){
-     return calcularImpuestos();
+    
+    public Local getLocal(){
+        return builder.getLocal();
     }
-
-    @Override
-    public String toString() {
-        return nombreCentro;
+    
+    public void construirLocal(){
+        builder.crearNuevoLocal();
+        builder.buildNombreLocal();
+        builder.buildHorario();
+        builder.buildNumTrabajadores();
+        builder.buildM2();
+        builder.buildTax();
     }
 }

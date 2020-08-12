@@ -1,30 +1,61 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package entidades;
 
+/**
+ *
+ * @author bryan
+ */
 public class LocalRopaFemenina extends LocalRopa{
-    protected double taxFemenina = 0.9;
 
-    public LocalRopaFemenina(String CentroComercial, String nombreLocalRopa, String horario, int numTrabajadores, int m2) {
-        super(CentroComercial, nombreLocalRopa, horario, numTrabajadores, m2);
+    @Override
+    public void buildNombreLocal() {
+        local.setNombreLocal("Women Clothes");}
 
-    }
+    @Override
+    public void buildHorario() {
+        local.setHorario("11H00 - 20H00");}
 
-    public double getTaxFemenina() {
-        return taxFemenina;
-    }
+    @Override
+    public void buildNumTrabajadores() {
+        local.setNumTrabajadores(15);}
 
-    public void setTaxFemenina(double taxFemenina) {
-        this.taxFemenina = taxFemenina;
+    @Override
+    public void buildM2() {
+        local.setM2(450);}
+
+    @Override
+    public void buildTax() {
+        local.setTax(0.9);}
+    
+    
+    //creacion de local de acuerdo al usuario
+    @Override
+    public void buildNombreLocal(String n) {
+        local.setNombreLocal(n);
     }
 
     @Override
-    public double calcularImpuestos() {
-        return getM2()*taxFemenina;
+    public void buildHorario(String h) {
+        local.setHorario(h);
     }
 
     @Override
-    public String toString() {
-        return "LocalRopaFemenina{" +
-                "taxFemenina=" + taxFemenina +
-                '}';
+    public void buildNumTrabajadores(int i) {
+        local.setNumTrabajadores(i);
     }
+
+    @Override
+    public void buildM2(double i) {
+        local.setM2(i);
+    }
+
+    @Override
+    public void buildTax(double tax) {
+        local.setTax(tax);
+    }
+     
 }
